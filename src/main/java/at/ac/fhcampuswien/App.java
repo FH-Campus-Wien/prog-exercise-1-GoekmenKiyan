@@ -60,19 +60,17 @@ public class App {
     public void swapTwoNumbers(){
         Scanner scan = new Scanner(System.in);
 
-        int x , y;
+        int n1;
+        int n2;
 
         System.out.println("Before Swap:");
-        System.out.println("x: " + "y: "+"After Swap:");
 
-        x = scan.nextInt();
-        y = scan.nextInt();
-        x = x+y;
-        y = x-y;
-        x = x-y;
+        n1 = scan.nextInt();
+        n2 = scan.nextInt();
 
-        System.out.println("x: " + x);
-        System.out.println("y: " + y);
+        System.out.println("x: y: After Swap:");
+        System.out.println("x: " + n2);
+        System.out.println("y: " + n1);
 
     }
 
@@ -138,19 +136,19 @@ public class App {
 
         switch (commission){
             case 0:
-                System.out.println("Enter CommissionClass: "+"Your Commission Rate was set to 0.0");
+                System.out.println("Enter CommissionClass: " + "Your Commission Rate was set to 0.0");
                 break;
             case 1:
-                System.out.println("Enter CommissionClass: "+"Your Commission Rate was set to 0.01");
+                System.out.println("Enter CommissionClass: " + "Your Commission Rate was set to 0.01");
                 break;
             case 2:
-                System.out.println("Enter CommissionClass: "+"Your Commission Rate was set to 0.02");
+                System.out.println("Enter CommissionClass: " + "Your Commission Rate was set to 0.02");
                 break;
             case 3:
-                System.out.println("Enter CommissionClass: "+"Your Commission Rate was set to 0.03");
+                System.out.println("Enter CommissionClass: " + "Your Commission Rate was set to 0.03");
                 break;
             case 4:
-                System.out.println("Enter CommissionClass: "+"Your Commission Rate was set to 0.04");
+                System.out.println("Enter CommissionClass: " + "Your Commission Rate was set to 0.04");
         }
     }
 
@@ -158,7 +156,9 @@ public class App {
     public void leapyear(){
 
         Scanner scan = new Scanner(System.in);
+
         int x = scan.nextInt();
+
         if (x % 4 == 0 && x % 400 == 0) {
             System.out.println("Year: "+"Leapyear");
         }
@@ -170,14 +170,15 @@ public class App {
     public void transposedNumbers(){
 
         Scanner scan = new Scanner(System.in);
+
         int x = scan.nextInt();
-        int rev = 0;
+        int reverse = 0;
 
         while (x!=0 && x<=999){
-            rev=rev*10 + x%10;
+            reverse = reverse*10 + x%10;
             x=x/10;
         }
-        System.out.println("Number: "+rev);
+        System.out.println("Number: " + reverse);
 
     }
 
